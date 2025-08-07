@@ -37,9 +37,7 @@ export default defineNuxtConfig({
           href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'
         },
          {
-          rel: 'icon',
-          type: 'image/png',
-          href: 'images/star.png'
+           rel:"shortcut icon", href:"https://www.rawpixel.com/image/8397641/sparkle-icon-png-sticker-transparent-background#eyJrZXlzIjoic3BhcmtsZSBpY29ucyIsInNvcnRlZEtleXMiOiJpY29uIHNwYXJrbGUifQ==" ,type:"image/x-icon"
         },
         {
          rel:"stylesheet",

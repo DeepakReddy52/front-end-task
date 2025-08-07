@@ -210,7 +210,7 @@ onMounted(() => {
 }
 .timeline-center {
   max-width: 100%;
-  height: auto;
+  height:850px;
   display: block;
   margin: 0 auto;
   position: relative;

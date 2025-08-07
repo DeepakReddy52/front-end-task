@@ -10,7 +10,7 @@
       <nav class="nav-desktop">
         <div class="menu-links">
           <a href="#">Buy & Sell</a>
-          <a href="#">Development</a>
+          <a href="#development" >Development</a>
           <a href="#">Work</a>
           <a href="#">Portfolio</a>
           <a href="#">Upgrade</a>
@@ -61,9 +61,11 @@
     <Banner />
   <CoinDetails />
     <WorkPannel />
-    <Development />
+    <section id="development"> <Development /></section>
+   
     <Getstarted />
     <Portfolio />
+    <Upgrade />
   <Footer />
   </section>
 </template>
@@ -76,6 +78,7 @@ import WorkPannel from '../components/WorkPannel.vue'
 import Development from '../components/Development.vue'
 import Getstarted from '../components/Getstarted.vue'
 import Portfolio from '../components/Portfolio.vue'
+import Upgrade from '../components/Upgrade.vue'
 import Footer from '../components/Footer.vue'
 
 const isSticky = ref(false)
@@ -125,7 +128,7 @@ html {
 }
 
 .header {
-  background: transparent;
+  /* background: transparent; */
   position: relative;
   width: 100%;
   z-index: 40;
@@ -134,7 +137,7 @@ html {
   justify-content: center;
   transition:
     padding 0.4s ease,
-    background-color 0.4s ease,
+    background-color 0.3s ease,
     transform 0.8s ease,
     opacity 0.4s ease;
 }
@@ -179,9 +182,9 @@ html {
 }
 
 .menu-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
+  color:#D8DBDB;
+  font-family:sans-serif;
+  font-weight: 700;
   transition: color 0.3s;
 }
 

@@ -4,12 +4,12 @@
       <div class="portfolio-inner">
         <div class="portfolio-grid">
           <!-- First Box -->
-          <div class="first-box">
+          <div class="first-box scroll-down">
             <img src="/public/images/img-portfolio.png" alt="portfolio" />
           </div>
 
           <!-- Second Box -->
-          <div class="second-box">
+          <div class="second-box scroll-up">
             <p class="title">
               Cryptocurrency <span class="highlight">Portfolio</span>
             </p>
@@ -56,6 +56,28 @@
     </div>
   </section>
 </template>
+
+<script setup>
+onMounted(() => {
+  const observerOptions = {
+    threshold: 0.2,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      } else {
+        entry.target.classList.remove('animate');
+      }
+    });
+  }, observerOptions);
+
+  const scrollElements = document.querySelectorAll('.scroll-down, .scroll-up');
+  scrollElements.forEach(el => observer.observe(el));
+});
+</script>
+
 
 <style scoped>
 /* Section padding */
@@ -262,6 +284,23 @@ td h4 {
   width: 32px;
   height: 32px;
   object-fit: contain;
+}
+
+.scroll-down, .scroll-up {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-up {
+  transform: translateY(-50px);
+}
+
+/* When visible */
+.scroll-down.animate,
+.scroll-up.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 </style>
