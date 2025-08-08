@@ -1,6 +1,6 @@
 <template>
   <div class="app-wrapper">
-    <nuxt-layout>
+    <nuxt-layout class="nuxt-layout">
       <nuxt-page />
     </nuxt-layout>
   </div>
@@ -18,6 +18,11 @@ body {
 
 .app-wrapper {
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
+  /* width: 100vw; */
+}
+.nuxt-layout{
+  overflow: hidden;
+
 }
 </style>

@@ -62,10 +62,11 @@
 /* Main container box */
 .get-started-container {
   border: 2px solid rgba(255, 255, 255, 0.1);
-  padding: 64px 56px;
+  padding: 40px 56px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.02);
   max-width: 100%;
+  height:fit-content;
 }
 
 /* Flex wrapper: row ≥1024px, column <1024px */
@@ -87,10 +88,12 @@
 
 /* Heading styles */
 .heading-text {
-  font-size: 32px;
+  margin-top: 0%;
+  font-size: 40px;
   color: #ffffff;
   font-weight: 500;
   margin-bottom: 24px;
+   font-family: 'DM Sans', sans-serif;
 }
 
 .highlight {
@@ -127,12 +130,16 @@
 .start-btn {
   background-color: rgb(153, 227, 158);
   color: #000;
-  padding: 12px 24px;
-  font-weight: 600;
+  /* padding: 12px 24px; */
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
   border: none;
   border-radius: 10px;
   transition: all 0.3s ease;
-  font-size: 16px;
+  font-size: 20px;
+  width:150px;
+  height:60px;
+  cursor: pointer;
 }
 
 .start-btn:hover {

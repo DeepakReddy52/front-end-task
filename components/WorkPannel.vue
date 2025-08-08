@@ -1,5 +1,5 @@
 <template>
-  <section class="work-section">
+  <section  class="work-section">
     <div class="main-container">
       <div class="work-container">
         <!-- Left Aside -->
@@ -91,6 +91,18 @@ onMounted(() => {
   }
 }
 
+.work-with-us {
+  margin: 0px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight:50;
+}
+
+.work-blockchain-project{
+  margin: 0px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight:500 ;
+}
+
 .add-colour {
   color: rgb(153, 227, 158);
 }
@@ -127,7 +139,7 @@ onMounted(() => {
 /* Typography for p inside para-one */
 .para-one > p {
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {

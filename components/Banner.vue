@@ -110,7 +110,7 @@
 }
 
 .crypto-line{
-  font-size: 28px;
+  font-size: 28px
 }
 
 /* Hide image below 1024px */
@@ -125,6 +125,7 @@
 
 /* Text */
 .icon-and-go {
+  font-family:'DM Sans', sans-serif ;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -137,9 +138,10 @@
 }
 
 .banner-heading {
-  font-size: 76px;
-  font-weight: bold;
-  margin: 0.5rem 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 75px;
+  font-weight: 500;
+  /* margin: 0.5rem 0; */
 }
 
 .white-text {
@@ -159,7 +161,8 @@
 
 .styled-button {
   padding: 0.75rem 1.5rem;
-  font-size: 1rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
   font-weight: 600;
   border-radius: 8px;
   border: 1px solid rgb(153, 227, 158);
@@ -201,6 +204,12 @@
   width: 240px;
   height: 70px;
   object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.store-images img:hover {
+  transform: scale(1.1); /* Slight scale-up */
 }
 
 /* Animation keyframes */
@@ -242,5 +251,81 @@
   }
 }
 
+/* Tablet screens (768px–1023px) */
+@media (max-width: 1023px) {
+  .banner-wrapper {
+    width: 100%;
+  }
+
+  .banner-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 16px;
+  }
+
+  .banner-text-block {
+    padding-bottom: 0;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .banner-heading {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .crypto-line {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .banner-buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+  }
+
+  .styled-button {
+    width: 100%;
+    max-width: 280px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  .store-images {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
+  }
+
+  .store-images img {
+    width: 180px;
+    height: 60px;
+    padding-top: 20px;
+  }
+}
+
+/* Mobile screens (max-width: 767px) */
+@media (max-width: 767px) {
+  .banner-heading {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  .crypto-line {
+    font-size: 18px;
+  }
+
+  .styled-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .store-images img {
+    width: 150px;
+    height: 50px;
+  }
+}
 
 </style>

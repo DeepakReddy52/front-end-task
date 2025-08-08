@@ -1,5 +1,5 @@
 <template>
-  <section class="portfolio-section">
+  <section id="portfolio" class="portfolio-section">
     <div class="portfolio-wrapper">
       <div class="portfolio-inner">
         <div class="portfolio-grid">
@@ -85,42 +85,30 @@ onMounted(() => {
   padding-top: 48px;
 }
 
-@media (min-width: 1025px) {
-  .portfolio-section {
-    padding-top: 192px;
-  }
-}
-
-/* Outer margin wrapper */
+/* Default: below 1440px */
 .portfolio-wrapper {
   margin-left: 0;
   margin-right: 0;
 }
 
-@media (min-width: 1440px) {
+.portfolio-inner {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* 1440px to 2559px */
+@media (min-width: 1440px) and (max-width: 2559px) {
   .portfolio-wrapper {
     margin-left: 120px;
     margin-right: 120px;
   }
 }
 
+/* 4K and above */
 @media (min-width: 2560px) {
   .portfolio-wrapper {
     margin-left: 680px;
     margin-right: 680px;
-  }
-}
-
-/* Inner padding */
-.portfolio-inner {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-@media (min-width: 768px) {
-  .portfolio-inner {
-    padding-left: 24px;
-    padding-right: 24px;
   }
 }
 
@@ -198,21 +186,24 @@ onMounted(() => {
 
 /* Typography */
 .title {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: 500;
   color: white;
   margin-bottom: 8px;
+   font-family: 'DM Sans', sans-serif;
 }
 
 .heading {
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 40px;
+  font-weight: 500;
   color: white;
   margin-bottom: 16px;
+  font-family: 'DM Sans', sans-serif;
+  width:auto;
 }
 
 .text {
-  font-size: 16px;
+  font-size: 20px;
   color: #ccc;
   margin-bottom: 24px;
 }
@@ -225,6 +216,7 @@ onMounted(() => {
 .responsive-br {
   display: none;
 }
+
 
 @media (max-width: 767px) {
   .responsive-br {
@@ -257,9 +249,10 @@ td:first-child {
 }
 
 td h4 {
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
+  color: #d8dbdb;
+  font-size: 28px;
+  font-weight: 100;
+  font-family: 'DM Sans', sans-serif;
   margin: 0;
 }
 
