@@ -74,7 +74,6 @@ onMounted(() => {
   position: relative;
   overflow: hidden;
   padding: 0 16px 112px 16px;
-  margin-top: -140px;
   margin-bottom: 60px;
   margin-left: 20px;
 }
@@ -82,6 +81,7 @@ onMounted(() => {
 @media (min-width: 1440px) {
   .motion-carousel {
     padding: 0 120px;
+    margin-top: -140px;
   }
 }
 @media (min-width: 2560px) {

@@ -1,12 +1,12 @@
 <template>
-  <section class="devlop-cointainer">
+  <section id="development" class="devlop-cointainer ">
     <div class="spaces-indicator">
       <div class="text-area">
         <!-- Text Block -->
         <div class="textspace fade-down-on-scroll">
           <p class="bottom-margin">Development <span class="add-color">timeline</span></p>
           <h2 class="detailed-line">
-            We can enter at any point or help you all the way through the development cycle
+            We can enter at any point or help you all the way through the development cycle.
           </h2>
         </div>
 
@@ -21,7 +21,7 @@
               <div class="extra-img blur-bg">
                 <img src="/images/extra-img-1.svg" alt="extra-1" />
               </div>
-              <div class="extra-text">
+              <div class="extra-text" id="right">
                 <h5>Planning</h5>
                 <p>Map the project's scope and architecture</p>
               </div>
@@ -45,7 +45,7 @@
               <div class="extra-img blur-bg">
                 <img src="/images/extra-img-3.svg" alt="extra-3" />
               </div>
-              <div class="extra-text">
+              <div class="extra-text" id="right">
                 <h5>Prototype</h5>
                 <p>Build a working prototype to test your product</p>
               </div>
@@ -187,13 +187,54 @@ onMounted(() => {
 }
 .bottom-margin {
   margin-bottom: 36px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
 }
 .add-color {
   color: rgb(153, 227, 158);
 }
 .detailed-line {
   margin-bottom: 80px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 38px;
 }
+
+@media(min-width:1440px){
+  .detailed-line{
+    height:96px;
+    width: 860px;
+    margin-right:107px ;
+    margin-left:107px ;
+    justify-self: center;
+  }
+}
+
+
+
+@media(min-width:769px) and(max-width:1239px){
+  .detailed-line{
+    height:144px;
+    width: 716px;
+    margin-right:89px ;
+    margin-left:89px ;
+    height: fit-content;
+    width:auto ;
+  }
+}
+
+@media(min-width:375px) and (max-width:768px){
+  .detailed-line{
+    /* height:144px;
+    width: 736px; */
+    height: auto;
+    width:auto;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
 @media (max-width: 1024px) {
   .detailed-line {
     margin: 0 89px 80px;
@@ -204,6 +245,15 @@ onMounted(() => {
     margin: 0 107px 80px;
   }
 }
+
+@media(max-width:320px){
+  .detailed-line{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+
 .img-container {
   width: 100%;
   position: relative;
@@ -234,6 +284,15 @@ onMounted(() => {
 .extra-text h5 {
   font-size: 18px;
   margin-bottom: 8px;
+}
+
+#right{
+  justify-items: right;
+}
+
+@media (max-width:768px) {#right{
+  justify-items: left;
+}
 }
 .extra-text p {
   font-size: 14px;

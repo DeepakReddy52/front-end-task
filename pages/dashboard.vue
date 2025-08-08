@@ -3,18 +3,18 @@
     <div class="nav-wrapper">
       <!-- Logo -->
       <div class="logo">
-        <img src="/images/logo.svg" alt="logo" />
+        <a href="/"><img src="/images/logo.svg" alt="logo" /></a>
       </div>
 
       <!-- Navigation + Auth Buttons (visible on desktop) -->
       <nav class="nav-desktop">
         <div class="menu-links">
-          <a href="#">Buy & Sell</a>
+          <a href="#banner">Buy & Sell</a>
           <a href="#development" >Development</a>
-          <a href="#">Work</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Upgrade</a>
-          <a href="#">Docs</a>
+          <a href="#work">Work</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#upgrade">Upgrade</a>
+          <a href="/">Docs</a>
         </div>
 
         <div class="auth-buttons">
@@ -37,12 +37,12 @@
         </div>
 
         <div class="menu-links">
-          <a href="#">Buy & Sell</a>
-          <a href="#">Development</a>
-          <a href="#">Work</a>
-          <a href="#">Portfolio</a>
-          <a href="#">Upgrade</a>
-          <a href="#">Docs</a>
+          <a href="/">Buy & Sell</a>
+          <a href="#work">Work</a>
+          <a href="#development">Development</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#upgrade">Upgrade</a>
+          <a href="/">Docs</a>
         </div>
 
         <div class="auth-buttons">
@@ -57,7 +57,6 @@
   <div class="header-spacer"></div>
 
   <!-- Page Sections -->
-  <section class="background-reverse">
     <Banner />
   <CoinDetails />
     <WorkPannel />
@@ -66,12 +65,14 @@
     <Getstarted />
     <Portfolio />
     <Upgrade />
+    <Support />
+    <Scrolltotop />
   <Footer />
-  </section>
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
+// components
 import Banner from '../components/Banner.vue'
 import CoinDetails from '../components/CoinDetails.vue'
 import WorkPannel from '../components/WorkPannel.vue'
@@ -79,6 +80,8 @@ import Development from '../components/Development.vue'
 import Getstarted from '../components/Getstarted.vue'
 import Portfolio from '../components/Portfolio.vue'
 import Upgrade from '../components/Upgrade.vue'
+import Support from '../components/Support.vue'
+import Scrolltotop from '../components/Scrolltotop.vue'
 import Footer from '../components/Footer.vue'
 
 const isSticky = ref(false)
@@ -128,7 +131,6 @@ html {
 }
 
 .header {
-  /* background: transparent; */
   position: relative;
   width: 100%;
   z-index: 40;
@@ -167,7 +169,9 @@ html {
 }
 
 .logo img {
-  height: 45px;
+  height: 55px;
+  width: 195px;
+  cursor: pointer;
 }
 
 .nav-desktop {
@@ -183,9 +187,12 @@ html {
 
 .menu-links a {
   color:#D8DBDB;
-  font-family:sans-serif;
-  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  font-weight:500;
   transition: color 0.3s;
+  text-decoration-line: none;
+  cursor: pointer;
 }
 
 .menu-links a:hover {
@@ -195,6 +202,8 @@ html {
 .auth-buttons {
   display: flex;
   gap: 1.25rem;
+  height: fit-content;
+  width: auto;
 }
 
 .sign-in {
@@ -202,9 +211,12 @@ html {
   background: transparent;
   border: 1px solid rgb(153, 227, 158);
   padding: 0.65rem 1.25rem;
-  font-size: 1rem;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 100;
   border-radius: 0.375rem;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .sign-in:hover {
@@ -220,6 +232,7 @@ html {
   font-size: 1rem;
   border-radius: 0.375rem;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .sign-up:hover {
@@ -312,9 +325,5 @@ html {
   .nav-actions {
     display: none;
   }
-}
-
-.background-reverse{
-   background: linear-gradient(60deg, #1a2c33 5%, #050d1f 90%);
 }
 </style>

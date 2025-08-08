@@ -1,5 +1,5 @@
 <template>
-    <section class="upgrade top,bottom padding-160px below 768 top,bottom pading 80px">
+    <section id="upgrade" class="upgrade top,bottom padding-160px below 768 top,bottom pading 80px">
         <div class="margin 680 sides for 4k, margin 120 sides for 1440 >1440 no margin padding 16px on sides for all">
             <div class="grid-container">
                 <div class="box-1">
@@ -63,7 +63,7 @@
   padding-right: 16px;
 }
 
-@media (min-width: 1441px) and (max-width: 2560px) {
+@media (min-width: 1440px) and (max-width: 2560px) {
   .margin {
     margin-left: 120px;
     margin-right: 120px;
@@ -85,6 +85,11 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
+}
+
+h4{
+  color: #d8dbdb99;
+  filter: contrast(5.5);
 }
 
 @media (max-width: 1023px) {
@@ -113,15 +118,20 @@
   font-size: 18px;
   margin-bottom: 12px;
   color: rgb(153, 227, 158);
-  font-weight: 600;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: 0px;
 }
 
 /* Caption */
 .caption {
-  font-size: 32px;
-  font-weight: bold;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
   margin-bottom: 12px;
   color: #ffffff;
+  margin-top: 0px;
 }
 
 @media (max-width: 768px) {
@@ -132,10 +142,11 @@
 
 /* Subtext */
 .suggestion {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 28px;
   color: #ccc;
   line-height: 1.6;
+  margin-top: 0px;
 }
 
 /* Inner Grid for Features */
